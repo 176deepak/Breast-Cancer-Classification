@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/static/icon.png">
+    <title>Breast Cancer Prediction</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <center>
+        <h1>
+            <b>Breast Cancer Classification</b>
+        </h1>
+    </center>
+    <center>
+        <div>
+            <form action="" method="post">
+                <label>Clump Thikness</label><br>
+                <input type="number" placeholder="Enter..." id="CT" name="CT" min="0" max="100" step="any"><br>
+
+                <label>Uniformity of Cell Size</label><br>
+                <input type="number" placeholder="Enter..." id="uSize" name="uSize" min="0" max="100" step="any"><br>
+                
+                <label>Uniformity of Cell Shape</label><br>
+                <input type="number" placeholder="Enter..." id="uShape" name="uShape" min="0" max="100" step="any"><br>
+                
+                <label>Marginal Adhesion</label><br>
+                <input type="number" placeholder="Enter..." id="mA" name="mA" min="0" max="100" step="any"><br>
+                
+                <label>Single Epithelial Cell Size</label><br>
+                <input type="number" placeholder="Enter..." id="SECS" name="SECS" min="0" max="100" step="any"><br>
+                
+                <label>Bare Nuclei</label><br>
+                <input type="number" placeholder="Enter..." id="BN" name="BN" min="0" max="100" step="any"><br>
+                
+                <label>Bland Chromatin</label><br>
+                <input type="number" placeholder="Enter..." id="BC" name="BC" min="0" max="100" step="any"><br>
+                
+                <label>Normal Nucleoli</label><br>
+                <input type="number" placeholder="Enter..." id="NN" name="NN" min="0" max="100" step="any"><br>
+                
+                <label>Mitoses</label><br>
+                <input type="number" placeholder="Enter..." id="Mit" name="Mit" min="0" max="100" step="any"><br>
+                
+                <button type="submit" class="button">Predict</button>
+            </form>
+            
+            <h3>Prediction: {{ pred }}</h3>
+
+        </div>    
+    </center>
+    
+</body>
+</html>
