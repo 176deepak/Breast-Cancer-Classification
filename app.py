@@ -31,10 +31,10 @@ def bcc():
             pred = "Benign"
         elif prediction[0] == 4:
             pred = "Malignant"
-        return render_template("base.html", pred = pred)
+        return render_template("index.html", pred = pred)
 
     else:
-        return render_template("base.html")
+        return render_template("index.html")
         
 
 if __name__ == "__main__":
